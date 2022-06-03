@@ -1,0 +1,47 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pitcher_name: MyString
+  pitcher_team: MyString
+  pitch_type: MyString
+  times_thrown: 1
+  strikes: 1
+  balls: 1
+  put_in_play: 1
+  to_righty: 1
+  to_lefty: 1
+  called_strikes: 1
+  swinging_strikes: 1
+  fouls: 1
+  balls_in_dirt: 1
+  in_play_out: 1
+  in_play_safe: 1
+  in_play_runs: 1
+  hit_by_pitches: 1
+  avg_speed: 1.5
+  avg_spin_rate: 1.5
+  avg_hit_launch_speed: 1.5
+  avg_hit_launch_angle: 1.5
+
+two:
+  pitcher_name: MyString
+  pitcher_team: MyString
+  pitch_type: MyString
+  times_thrown: 1
+  strikes: 1
+  balls: 1
+  put_in_play: 1
+  to_righty: 1
+  to_lefty: 1
+  called_strikes: 1
+  swinging_strikes: 1
+  fouls: 1
+  balls_in_dirt: 1
+  in_play_out: 1
+  in_play_safe: 1
+  in_play_runs: 1
+  hit_by_pitches: 1
+  avg_speed: 1.5
+  avg_spin_rate: 1.5
+  avg_hit_launch_speed: 1.5
+  avg_hit_launch_angle: 1.5

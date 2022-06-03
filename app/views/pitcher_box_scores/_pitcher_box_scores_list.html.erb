@@ -1,0 +1,50 @@
+<%= hidden_field_tag :direction, params[:direction] %>
+<%= hidden_field_tag :sort, params[:sort] %>
+<div id="pitch_statistics" class="table-responsive-sm table">
+  <table class="table-hover" width="100%" height="100%" border="1">
+    <tr>
+      <thead class="table-dark" >
+        <th><%= sortable "official_game_date", "Game Date" %></th> 
+        <th><%= sortable "pitcher_name", "Pitcher Name" %></th> 
+        <th><%= sortable "pitcher_team", "Pitcher Team" %></th> 
+        <th><%= sortable "opposing_team", "Opposing Team" %></th> 
+        <th><%= sortable "venue", "Venue" %></th> 
+        <th><%= sortable "innings_pitched", "Innings Pitched" %></th> 
+        <th><%= sortable "batters_faced", "Batters Faced" %></th> 
+        <th><%= sortable "num_hits", "Hits" %></th> 
+        <th><%= sortable "singles", "Singles" %></th> 
+        <th><%= sortable "doubles", "Doubles" %></th> 
+        <th><%= sortable "triples", "Triple" %></th> 
+        <th><%= sortable "home_runs", "Home Runs" %></th> 
+        <th><%= sortable "strikeouts", "Strikeouts" %></th> 
+        <th><%= sortable "walks", "Walks" %></th> 
+        <th><%= sortable "intent_walks", "Intentional Walks" %></th> 
+        <th><%= sortable "hit_by_pitches", "HBP" %></th> 
+        <th><%= sortable "wild_pitches", "Wild Pitches" %></th> 
+      </thead>
+    </tr>
+    <% @pitcher_box_scores.each do |pitcher_box_score| %>
+    <tbody>
+      <tr>
+        <td><%= pitcher_box_score.official_game_date %></td > 
+        <td><%= pitcher_box_score.pitcher_name%></td > 
+        <td><%= pitcher_box_score.pitcher_team%></td > 
+        <td><%= pitcher_box_score.opposing_team%></td > 
+        <td><%= pitcher_box_score.venue%></td > 
+        <td><%= pitcher_box_score.innings_pitched%></td > 
+        <td><%= pitcher_box_score.batters_faced%></td > 
+        <td><%= pitcher_box_score.num_hits%></td > 
+        <td><%= pitcher_box_score.singles%></td > 
+        <td><%= pitcher_box_score.doubles%></td > 
+        <td><%= pitcher_box_score.triples%></td > 
+        <td><%= pitcher_box_score.home_runs%></td > 
+        <td><%= pitcher_box_score.strikeouts%></td > 
+        <td><%= pitcher_box_score.walks%></td > 
+        <td><%= pitcher_box_score.intent_walks%></td > 
+        <td><%= pitcher_box_score.hit_by_pitches%></td >
+        <td><%= pitcher_box_score.wild_pitches%></td >
+      </tr>
+    </tbody>
+    <% end %>
+  </table>
+</div>

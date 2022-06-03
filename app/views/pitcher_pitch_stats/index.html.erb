@@ -1,0 +1,57 @@
+<div class="fit-to-screen">
+  <div id="pitcher_pitch_stats" class="table-responsive-sm table">
+    <table class="table-hover" width="100%" height="100%" border="1">
+      <tr>
+
+        <thead class="table-dark" >
+          <th class="sticky">Pitcher Name</th> 
+          <th class="sticky">Pitcher Team</th> 
+          <th class="sticky">Pitch Type</th>
+          <th class="sticky">Times Thrown</th>
+          <th class="sticky">Strikes</th>
+          <th class="sticky">Balls</th>
+          <th class="sticky">Put in Play</th>
+          <th class="sticky">To Righty</th>
+          <th class="sticky">To Lefty</th>
+          <th class="sticky">Called Strikes</th>
+          <th class="sticky">Swinging Strikes</th>
+          <th class="sticky">Foul Balls</th>
+          <th class="sticky">Ball in Dirt</th>
+          <th class="sticky">Put Out</th>
+          <th class="sticky">Hits</th>
+          <th class="sticky">HBP</th>
+          <th class="sticky">Avg Speed</th>
+          <th class="sticky">Avg Spin Rate</th>
+          <th class="sticky">Avg Hit Launch Speed</th>
+          <th class="sticky">Avg Hit Launch Angle</th>
+        </thead>
+      </tr>
+      <% @pitcher_pitch_stats.each do |pitcher_pitch_stat| %>
+      <tbody>
+        <tr>
+          <td><%= pitcher_pitch_stat.pitcher_name %></td > 
+          <td><%= pitcher_pitch_stat.pitcher_team%></td > 
+          <td><%= pitcher_pitch_stat.pitch_type%></td > 
+          <td><%= pitcher_pitch_stat.times_thrown%></td > 
+          <td><%= pitcher_pitch_stat.strikes%></td > 
+          <td><%= pitcher_pitch_stat.balls%></td > 
+          <td><%= pitcher_pitch_stat.put_in_play%></td > 
+          <td><%= pitcher_pitch_stat.to_righty%></td > 
+          <td><%= pitcher_pitch_stat.to_lefty%></td > 
+          <td><%= pitcher_pitch_stat.called_strikes%></td > 
+          <td><%= pitcher_pitch_stat.swinging_strikes%></td > 
+          <td><%= pitcher_pitch_stat.fouls%></td >
+          <td><%= pitcher_pitch_stat.balls_in_dirt%></td > 
+          <td><%= pitcher_pitch_stat.in_play_out%></td > 
+          <td><%= pitcher_pitch_stat.in_play_safe%></td > 
+          <td><%= pitcher_pitch_stat.hit_by_pitches%></td > 
+          <td><%= pitcher_pitch_stat.avg_speed%></td > 
+          <td><%= pitcher_pitch_stat.avg_spin_rate%></td >
+          <td><%= pitcher_pitch_stat.avg_hit_launch_speed%></td >
+          <td><%= pitcher_pitch_stat.avg_hit_launch_angle%></td >  
+        </tr>
+      </tbody>
+      <% end %>
+    </table>
+  </div>
+</div>

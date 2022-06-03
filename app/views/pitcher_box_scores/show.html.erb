@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @pitcher_box_score %>
+
+<div>
+  <%= link_to "Edit this pitcher box score", edit_pitcher_box_score_path(@pitcher_box_score) %> |
+  <%= link_to "Back to pitcher box scores", pitcher_box_scores_path %>
+
+  <%= button_to "Destroy this pitcher box score", @pitcher_box_score, method: :delete %>
+</div>

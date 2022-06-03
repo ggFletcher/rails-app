@@ -1,0 +1,2 @@
+module PitcherBoxScoresHelper
+end

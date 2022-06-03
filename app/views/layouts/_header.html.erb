@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg" style="background-color: #333366;">
+  <%= link_to 'Stats Overview', root_path, class:"navbar-brand" %>
+  <div id="header">
+    <ul class="navbar-nav">
+      <li>
+        <%= link_to 'Pitcher Box Scores', pitcher_box_scores_path, class:"nav-link" %>
+      </li>
+      <li>
+        <%= link_to 'Team Stats', team_pitcher_stats_path, class:"nav-link" %>
+      </li>
+    </ul>
+  </div>
+</nav>
+<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script>
+$(function(){
+  $('a').each(function() {
+    if ($(this).prop('href') == window.location.href) {
+      $(this).addClass('current');
+    }
+  });
+});
+</script>

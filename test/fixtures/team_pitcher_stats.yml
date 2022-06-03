@@ -1,0 +1,31 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pitcher_team: MyString
+  num_pitchers: 1
+  batters_faced: 1
+  num_hits: 1
+  singles: 1
+  doubles: 1
+  triples: 1
+  home_runs: 1
+  strikeouts: 1
+  walks: 1
+  intent_walks: 1
+  hit_by_pitches: 1
+  wild_pitches: 1
+
+two:
+  pitcher_team: MyString
+  num_pitchers: 1
+  batters_faced: 1
+  num_hits: 1
+  singles: 1
+  doubles: 1
+  triples: 1
+  home_runs: 1
+  strikeouts: 1
+  walks: 1
+  intent_walks: 1
+  hit_by_pitches: 1
+  wild_pitches: 1

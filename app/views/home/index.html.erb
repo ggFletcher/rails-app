@@ -1,0 +1,64 @@
+<div class="fit-to-screen">
+  <%= form_tag home_index_path, :method => 'get', :id => 'search' do %>
+    <%= hidden_field_tag :direction, params[:direction] %>
+    <%= hidden_field_tag :sort, params[:sort] %>
+      <div class="search">
+        <%= text_field_tag :search, params[:search] %>
+        <%= submit_tag "Search by Name", :pitcher_name => nil %>
+      </div>
+    <div id="pitcher_pitch_stats" class="table-responsive-sm table">
+      <table class="table-hover pretty" width="100%" height="100%" border="1">
+        <tr class = "header">
+          <thead class="table-dark" >
+            <th><%= sortable "pitcher_name", "Pitcher Name" %></th> 
+            <th><%= sortable "pitcher_team", "Pitcher Team" %></th> 
+            <th><%= sortable "pitch_type", "Pitch Type" %></th>
+            <th><%= sortable "times_thrown", "Times Thrown" %></th>
+            <th><%= sortable "strikes", "Strikes" %></th>
+            <th><%= sortable "balls", "Balls" %></th>
+            <th><%= sortable "put_in_play", "Put in Play" %></th>
+            <th><%= sortable "to_righty", "To Righty" %></th>
+            <th><%= sortable "to_lefty", "To Lefty" %></th>
+            <th><%= sortable "called_strikes", "Called Strikes" %></th>
+            <th><%= sortable "swinging_strikes", "Swinging Strikes" %></th>
+            <th><%= sortable "fouls", "Foul Balls" %></th>
+            <th><%= sortable "balls_in_dirt", "Ball in Dirt" %></th>
+            <th><%= sortable "in_play_out", "Put Out" %></th>
+            <th><%= sortable "in_play_safe", "Hits" %></th>
+            <th><%= sortable "hit_by_pitches", "HBP" %></th>
+            <th><%= sortable "avg_speed", "Avg Speed" %></th>
+            <th><%= sortable "avg_spin_rate", "Avg Spin Rate" %></th>
+            <th><%= sortable "avg_hit_launch_speed", "Avg Hit Launch Speed" %></th>
+            <th><%= sortable "avg_hit_launch_angle", "Avg Hit Launch Angle" %></th>
+          </thead>
+        </tr>
+        <% @pitcher_pitch_stats.each do |pitcher_pitch_stat| %>
+        <tbody>
+          <tr>
+            <td><%= pitcher_pitch_stat.pitcher_name %></td > 
+            <td><%= pitcher_pitch_stat.pitcher_team%></td > 
+            <td><%= pitcher_pitch_stat.pitch_type%></td > 
+            <td><%= pitcher_pitch_stat.times_thrown%></td > 
+            <td><%= pitcher_pitch_stat.strikes%></td > 
+            <td><%= pitcher_pitch_stat.balls%></td > 
+            <td><%= pitcher_pitch_stat.put_in_play%></td > 
+            <td><%= pitcher_pitch_stat.to_righty%></td > 
+            <td><%= pitcher_pitch_stat.to_lefty%></td > 
+            <td><%= pitcher_pitch_stat.called_strikes%></td > 
+            <td><%= pitcher_pitch_stat.swinging_strikes%></td > 
+            <td><%= pitcher_pitch_stat.fouls%></td >
+            <td><%= pitcher_pitch_stat.balls_in_dirt%></td > 
+            <td><%= pitcher_pitch_stat.in_play_out%></td > 
+            <td><%= pitcher_pitch_stat.in_play_safe%></td > 
+            <td><%= pitcher_pitch_stat.hit_by_pitches%></td > 
+            <td><%= pitcher_pitch_stat.avg_speed%></td > 
+            <td><%= pitcher_pitch_stat.avg_spin_rate%></td >
+            <td><%= pitcher_pitch_stat.avg_hit_launch_speed%></td >
+            <td><%= pitcher_pitch_stat.avg_hit_launch_angle%></td >  
+          </tr>
+        </tbody>
+        <% end %>
+      </table>
+    </div>
+  <% end %>
+</div>

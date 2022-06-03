@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @team_pitcher_stat %>
+
+<div>
+  <%= link_to "Edit this team pitcher stat", edit_team_pitcher_stat_path(@team_pitcher_stat) %> |
+  <%= link_to "Back to team pitcher stats", team_pitcher_stats_path %>
+
+  <%= button_to "Destroy this team pitcher stat", @team_pitcher_stat, method: :delete %>
+</div>

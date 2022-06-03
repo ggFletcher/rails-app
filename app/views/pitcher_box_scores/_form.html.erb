@@ -1,0 +1,107 @@
+<%= form_with(model: pitcher_box_score) do |form| %>
+  <% if pitcher_box_score.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(pitcher_box_score.errors.count, "error") %> prohibited this pitcher_box_score from being saved:</h2>
+
+      <ul>
+        <% pitcher_box_score.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :official_game_date, style: "display: block" %>
+    <%= form.datetime_field :official_game_date %>
+  </div>
+
+  <div>
+    <%= form.label :pitcher_name, style: "display: block" %>
+    <%= form.text_field :pitcher_name %>
+  </div>
+
+  <div>
+    <%= form.label :pitcher_team, style: "display: block" %>
+    <%= form.text_field :pitcher_team %>
+  </div>
+
+  <div>
+    <%= form.label :opposing_team, style: "display: block" %>
+    <%= form.text_field :opposing_team %>
+  </div>
+
+  <div>
+    <%= form.label :venue, style: "display: block" %>
+    <%= form.text_field :venue %>
+  </div>
+
+  <div>
+    <%= form.label :at, style: "display: block" %>
+    <%= form.text_field :at %>
+  </div>
+
+  <div>
+    <%= form.label :innings_pitched, style: "display: block" %>
+    <%= form.text_field :innings_pitched %>
+  </div>
+
+  <div>
+    <%= form.label :batters_faced, style: "display: block" %>
+    <%= form.number_field :batters_faced %>
+  </div>
+
+  <div>
+    <%= form.label :num_hits, style: "display: block" %>
+    <%= form.number_field :num_hits %>
+  </div>
+
+  <div>
+    <%= form.label :singles, style: "display: block" %>
+    <%= form.number_field :singles %>
+  </div>
+
+  <div>
+    <%= form.label :doubles, style: "display: block" %>
+    <%= form.number_field :doubles %>
+  </div>
+
+  <div>
+    <%= form.label :triples, style: "display: block" %>
+    <%= form.number_field :triples %>
+  </div>
+
+  <div>
+    <%= form.label :home_runs, style: "display: block" %>
+    <%= form.number_field :home_runs %>
+  </div>
+
+  <div>
+    <%= form.label :strikeouts, style: "display: block" %>
+    <%= form.number_field :strikeouts %>
+  </div>
+
+  <div>
+    <%= form.label :walks, style: "display: block" %>
+    <%= form.number_field :walks %>
+  </div>
+
+  <div>
+    <%= form.label :intent_walks, style: "display: block" %>
+    <%= form.number_field :intent_walks %>
+  </div>
+
+  <div>
+    <%= form.label :hit_by_pitches, style: "display: block" %>
+    <%= form.number_field :hit_by_pitches %>
+  </div>
+
+  <div>
+    <%= form.label :wild_pitches, style: "display: block" %>
+    <%= form.number_field :wild_pitches %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

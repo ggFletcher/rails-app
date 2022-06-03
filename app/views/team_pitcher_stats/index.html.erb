@@ -1,0 +1,50 @@
+<div class="fit-to-screen team_pitcher_stats_page">
+  <%= form_tag team_pitcher_stats_path, :method => 'get', :id => 'search' do %>
+    <%= hidden_field_tag :direction, params[:direction] %>
+    <%= hidden_field_tag :sort, params[:sort] %>
+    <div class="search">
+      <%= text_field_tag :search, params[:search] %>
+      <%= submit_tag "Search by Team Name", :pitcher_team => nil %>
+    </div>
+    <div id="pitch_statistics" class="table-responsive-sm table">
+      <table class="table-hover pretty" width="100%" height="100%" border="1">
+        <tr>
+          <thead class="table-dark" >
+            <th><%= sortable "pitcher_team", "Pitcher Team" %></th> 
+            <th><%= sortable "num_pitchers", "Num Pitchers" %></th> 
+            <th><%= sortable "batters_faced", "Batters Faced" %></th> 
+            <th><%= sortable "num_hits", "Hits" %></th> 
+            <th><%= sortable "singles", "Singles" %></th> 
+            <th><%= sortable "doubles", "Doubles" %></th> 
+            <th><%= sortable "triples", "Triples" %></th> 
+            <th><%= sortable "home_runs", "Home Runs" %></th> 
+            <th><%= sortable "strikeouts", "Strikeouts" %></th> 
+            <th><%= sortable "walks", "Walks" %></th> 
+            <th><%= sortable "intent_walks", "Intentional Walks" %></th> 
+            <th><%= sortable "hit_by_pitches", "HBP" %></th> 
+            <th><%= sortable "wild_pitches", "Wild Pitches" %></th> 
+          </thead>
+        </tr>
+        <% @team_pitcher_stats.each do |team_pitcher_stat| %>
+        <tbody>
+          <tr>
+            <td><%= team_pitcher_stat.pitcher_team %></td > 
+            <td><%= team_pitcher_stat.num_pitchers%></td > 
+            <td><%= team_pitcher_stat.batters_faced%></td > 
+            <td><%= team_pitcher_stat.num_hits%></td > 
+            <td><%= team_pitcher_stat.singles%></td > 
+            <td><%= team_pitcher_stat.doubles%></td > 
+            <td><%= team_pitcher_stat.triples%></td > 
+            <td><%= team_pitcher_stat.home_runs%></td > 
+            <td><%= team_pitcher_stat.strikeouts%></td > 
+            <td><%= team_pitcher_stat.walks%></td > 
+            <td><%= team_pitcher_stat.intent_walks%></td > 
+            <td><%= team_pitcher_stat.hit_by_pitches%></td > 
+            <td><%= team_pitcher_stat.wild_pitches%></td > 
+          </tr>
+        </tbody>
+        <% end %>
+      </table>
+    </div>
+  <% end %>
+</div>

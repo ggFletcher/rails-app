@@ -1,0 +1,2 @@
+json.extract! pitcher_pitch_stat, :id, :pitcher_name, :pitcher_team, :pitch_type, :times_thrown, :strikes, :balls, :put_in_play, :to_righty, :to_lefty, :called_strikes, :swinging_strikes, :fouls, :balls_in_dirt, :in_play_out, :in_play_safe, :in_play_runs, :hit_by_pitches, :avg_speed, :avg_spin_rate, :avg_hit_launch_speed, :avg_hit_launch_angle, :created_at, :updated_at
+json.url pitcher_pitch_stat_url(pitcher_pitch_stat, format: :json)

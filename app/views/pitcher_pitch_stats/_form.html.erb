@@ -1,0 +1,122 @@
+<%= form_with(model: pitcher_pitch_stat) do |form| %>
+  <% if pitcher_pitch_stat.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(pitcher_pitch_stat.errors.count, "error") %> prohibited this pitcher_pitch_stat from being saved:</h2>
+
+      <ul>
+        <% pitcher_pitch_stat.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :pitcher_name, style: "display: block" %>
+    <%= form.text_field :pitcher_name %>
+  </div>
+
+  <div>
+    <%= form.label :pitcher_team, style: "display: block" %>
+    <%= form.text_field :pitcher_team %>
+  </div>
+
+  <div>
+    <%= form.label :pitch_type, style: "display: block" %>
+    <%= form.text_field :pitch_type %>
+  </div>
+
+  <div>
+    <%= form.label :times_thrown, style: "display: block" %>
+    <%= form.number_field :times_thrown %>
+  </div>
+
+  <div>
+    <%= form.label :strikes, style: "display: block" %>
+    <%= form.number_field :strikes %>
+  </div>
+
+  <div>
+    <%= form.label :balls, style: "display: block" %>
+    <%= form.number_field :balls %>
+  </div>
+
+  <div>
+    <%= form.label :put_in_play, style: "display: block" %>
+    <%= form.number_field :put_in_play %>
+  </div>
+
+  <div>
+    <%= form.label :to_righty, style: "display: block" %>
+    <%= form.number_field :to_righty %>
+  </div>
+
+  <div>
+    <%= form.label :to_lefty, style: "display: block" %>
+    <%= form.number_field :to_lefty %>
+  </div>
+
+  <div>
+    <%= form.label :called_strikes, style: "display: block" %>
+    <%= form.number_field :called_strikes %>
+  </div>
+
+  <div>
+    <%= form.label :swinging_strikes, style: "display: block" %>
+    <%= form.number_field :swinging_strikes %>
+  </div>
+
+  <div>
+    <%= form.label :fouls, style: "display: block" %>
+    <%= form.number_field :fouls %>
+  </div>
+
+  <div>
+    <%= form.label :balls_in_dirt, style: "display: block" %>
+    <%= form.number_field :balls_in_dirt %>
+  </div>
+
+  <div>
+    <%= form.label :in_play_out, style: "display: block" %>
+    <%= form.number_field :in_play_out %>
+  </div>
+
+  <div>
+    <%= form.label :in_play_safe, style: "display: block" %>
+    <%= form.number_field :in_play_safe %>
+  </div>
+
+  <div>
+    <%= form.label :in_play_runs, style: "display: block" %>
+    <%= form.number_field :in_play_runs %>
+  </div>
+
+  <div>
+    <%= form.label :hit_by_pitches, style: "display: block" %>
+    <%= form.number_field :hit_by_pitches %>
+  </div>
+
+  <div>
+    <%= form.label :avg_speed, style: "display: block" %>
+    <%= form.text_field :avg_speed %>
+  </div>
+
+  <div>
+    <%= form.label :avg_spin_rate, style: "display: block" %>
+    <%= form.text_field :avg_spin_rate %>
+  </div>
+
+  <div>
+    <%= form.label :avg_hit_launch_speed, style: "display: block" %>
+    <%= form.text_field :avg_hit_launch_speed %>
+  </div>
+
+  <div>
+    <%= form.label :avg_hit_launch_angle, style: "display: block" %>
+    <%= form.text_field :avg_hit_launch_angle %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,104 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+a.current {
+  text-decoration: underline;
+}
+
+.navbar-brand{
+    padding: 5px;
+    margin: 5px;
+}
+
+.nav-link{
+    padding: 5px;
+    margin: 5px;
+}
+
+.table-responsive-sm, .table {
+    table-layout: fixed;
+    object-fit: fill;
+    white-space: nowrap;
+    width: 100%;
+    height: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.td { 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    word-wrap: break-word;
+}
+
+.navbar {
+    width: 100%;
+}
+
+.fit-to-screen {
+    position: relative;
+    object-fit: fill;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    max-height: 90vh;
+}
+
+.search {
+    margin: 5px;
+}
+
+.position {
+    padding: 0px;
+    margin: 5px;
+}
+
+.header {
+    background-color: #333366;
+}
+
+th {
+    background-color: #333366;
+}
+
+.pretty th .current {
+    background-color: #333366;
+    color: white;
+    padding-right: 12px;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+.pretty th .asc {
+    background-color: #333366;
+    background-image: url(/images/up_arrow.gif);
+}
+
+.pretty th .desc {
+    background-color: #333366;
+    background-image: url(/images/down_arrow.gif);
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+
